@@ -39,6 +39,8 @@ print("Loading", end="")
 for i in range(5):
     print(f"\rLoading{'.' * (i + 1)}", end="")
 print("\rComplete!     ")
+# The f-string formats the output as "Loading" followed by the dots.
+# \r is a carriage return, which moves the cursor back to the beginning of the line, so each output overwrites the previous one on the same
 print()
 
 # 7. BACKSPACE (\b)
