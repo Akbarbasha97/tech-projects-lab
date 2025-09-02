@@ -1,0 +1,24 @@
+---
+- name: Playbook to install and start niginx
+  hosts: localhost
+  vars:
+    package_name: nginx
+  
+  tasks: 
+    - name: install nginx
+      package: 
+        name: "{{package_name }}"
+        state: present
+      register: install_status
+      notify: start package
+
+    - debug: 
+        var: install_status
+
+  handlers:
+    - name: start package
+      service:
+        name: "{{package_name }}"
+        state: started
+        enabled: yes
+    
