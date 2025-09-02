@@ -245,8 +245,7 @@ def advanced_calculator():
     print("Type 'exit' to quit")
 
     while True:
-        expression = input(
-            "\nEnter calculation (e.g., '5 + 3' or 'sqrt(16)'): ")
+        expression = input("\nEnter calculation (e.g., '5 + 3' or 'sqrt(16)'): ")
 
         if expression.lower() == 'exit':
             break
